@@ -12,12 +12,5 @@ $LAB
 .script("../../lib/jsclass/src/loader-browser.js")
 .script("widgets/hi/widget.js")
 .wait(function(){
-  $(function() {
-	$('body').append('<iframe id="ifr" src="widgets/hi/widget.html" style="display:none;"></iframe>');
-    $('#ifr').seamless({
-    	  loading: ''
-    }).show();
-  });
-  
   JS.require('jQuery.pluginname');
 });
