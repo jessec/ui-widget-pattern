@@ -13,6 +13,8 @@ $LAB
 .wait(function(){
 JSCLASS_PATH = '../../lib/jsclass/min';
   $(function() {
-    $('#ifr').seamless();
+    $('#ifr').seamless({
+    	  loading: ''
+    }).show();
   });
 });
