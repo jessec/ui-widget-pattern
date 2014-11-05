@@ -9,16 +9,15 @@ $LAB
 .setOptions({AlwaysPreserveOrder:true})
 .script("../../lib/jquery/zepto.min.js")
 .script("../../lib/seamless/build/seamless.parent.min.js")
-.script("../../lib/jsclass/min/loader-browser.js")
+.script("../../lib/jsclass/src/loader-browser.js")
+.script("widgets/hi/widget.js")
 .wait(function(){
   $(function() {
+	$('body').append('<iframe id="ifr" src="widgets/hi/widget.html" style="display:none;"></iframe>');
     $('#ifr').seamless({
     	  loading: ''
     }).show();
   });
-  JS.require('JS.Interface', function(Interface) {
-	  var IntComparable = new Interface([
-	     'compareTo', 'lt', 'lte', 'gt', 'gte', 'eq'
-	  ]);
-  });
+  
+  JS.require('jQuery.pluginname');
 });
