@@ -11,6 +11,19 @@ window.jQuery = Zepto;
 		$('#ifr').seamless();
 	});
 </script>
+<script>
+JSCLASS_PATH = '../../lib/jsclass/min';
+</script>
+<script src="../../lib/jsclass/min/loader-browser.js"></script>
+<script>
+JS.require('JS.Interface', function(Interface) { 
+	
+	var IntComparable = new Interface([
+	    'compareTo', 'lt', 'lte', 'gt', 'gte', 'eq'
+	]);
+	
+});
+</script>
 </head>
 <body style="background-color:#ccc">
 	<iframe id="ifr" src="widget.html"></iframe>
