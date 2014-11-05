@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="../../lib/pmrpc/pmrpc.js"></script>
-  </head>
-  <body>
-    <script>
-      // expose a procedure
-      pmrpc.register( {
-        publicProcedureName : "HelloPMRPC",
-        procedure : function(printParam) { alert(printParam); } }
-      );
-    </script>
-  </body>
+<head>
+<script src="../../lib/jquery/jquery-1.11.1.min.js"></script>
+<script src="../../lib/seamless/build/seamless.child.min.js"></script>
+<script>
+	$.seamless.connect();
+</script>
+</head>
+<body>Hi..
+</body>
 </html>
