@@ -10,5 +10,5 @@ $LAB
 .script("widgets/skeleton/widget.parent.packages.skeleton.js")
 .wait(function(){
 	window.widget = jQuery;
-  JS.require('widget.skeleton');
+	window.widget.skeleton = JS.require('widget.skeleton');
 });
