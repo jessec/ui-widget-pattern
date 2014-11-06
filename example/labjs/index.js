@@ -5,8 +5,10 @@ $LAB
 .setOptions({AlwaysPreserveOrder:true})
 .script("../../lib/jquery/zepto.min.js")
 .script("../../lib/seamless/build/seamless.parent.min.js")
+.script("../../lib/pmrpc/pmrpc.min.js")
 .script("../../lib/jsclass/src/loader-browser.js")
-.script("widgets/hi/widget.js")
+.script("widgets/skeleton/skeleton.packages.js")
 .wait(function(){
-  JS.require('jQuery.pluginname');
+	window.widget = jQuery;
+  JS.require('widget.skeleton');
 });

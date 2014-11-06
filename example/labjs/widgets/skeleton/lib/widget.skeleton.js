@@ -1,6 +1,8 @@
+
+
 ;
 (function($) {
-	$.fn.pluginname = function(options) {
+	$.fn.skeleton = function(options) {
 		if (!$(this).length) {
 			return this;
 		}
@@ -8,11 +10,11 @@
 		var settings = $.extend({}, this.defaultOptions, options);
 		return this;
 	};
-	$.pluginname = function(obj) {
+	$.skeleton = function(obj) {
 	};
 
 	  $(function() {
-			$('body').append('<iframe id="ifr" src="widgets/hi/widget.html"></iframe>');
+			$('body').append('<iframe id="ifr" src="widgets/skeleton/skeleton.html"></iframe>');
 			setTimeout(function(){
 				var child =   $('#ifr').seamless({
 			    	  loading: ''
@@ -25,4 +27,4 @@
 	  });
 
 
-})(jQuery);
+})(window.widget);
