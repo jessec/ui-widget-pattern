@@ -18,8 +18,6 @@
 			    	  loading: ''
 			    }).show();
 				child.receive(function(data, event) {
-
-					  // Print out the data that was received.
 					  console.log(data);
 				});
 			}, 30);
