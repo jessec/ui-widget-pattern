@@ -1,4 +1,4 @@
 JS.packages(function() { with(this) {
-    file( 'widgets/skeleton/lib/widget.skeleton.js')
+    file( 'widgets/skeleton/widget.parent.skeleton.js')
         .provides('widget.skeleton');
 }});

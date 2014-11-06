@@ -7,7 +7,7 @@ $LAB
 .script("../../lib/seamless/build/seamless.parent.min.js")
 .script("../../lib/pmrpc/pmrpc.min.js")
 .script("../../lib/jsclass/src/loader-browser.js")
-.script("widgets/skeleton/skeleton.packages.js")
+.script("widgets/skeleton/widget.parent.packages.skeleton.js")
 .wait(function(){
 	window.widget = jQuery;
   JS.require('widget.skeleton');
