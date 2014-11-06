@@ -10,16 +10,21 @@
 	};
 	$.pluginname = function(obj) {
 	};
-	
+
 	  $(function() {
 			$('body').append('<iframe id="ifr" src="widgets/hi/widget.html"></iframe>');
 			setTimeout(function(){
-			    $('#ifr').seamless({
+				var child =   $('#ifr').seamless({
 			    	  loading: ''
 			    }).show();
+				child.receive(function(data, event) {
+
+					  // Print out the data that was received.
+					  console.log(data);
+				});
 			}, 30);
 
 	  });
-		  
-	
+
+
 })(jQuery);

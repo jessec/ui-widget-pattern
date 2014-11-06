@@ -8,7 +8,7 @@ window.jQuery = Zepto;
 </script>
 <script src="../../../../lib/seamless/build/seamless.child.min.js"></script>
 <script>
-	$.seamless.connect({
+var parent = $.seamless.connect({
 	      url: 'index.html',
 	      container: 'div.content',
 	      allowStyleInjection: true
@@ -22,10 +22,10 @@ window.jQuery = Zepto;
 
   Inject.setModuleRoot("./modules");
   require.run("sub/program");
-  
 
-  
-  
+
+
+
 </script>
 <style>
 .content {
@@ -39,6 +39,22 @@ window.jQuery = Zepto;
 <div class="content">
 Hi..
 <br>
+<a href="#" id="send">send</a>
 </div>
+<script>
+
+Zepto(function($){
+
+
+console.log($('#send'));
+$('#send').on('click',function(e){
+	  alert('hi');
+	/* 	parent.send({
+	    myparam: 'This is anything you want it to be...'
+	  }); */
+});
+
+});
+</script>
 </body>
 </html>
