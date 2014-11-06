@@ -39,7 +39,7 @@ var parent = $.seamless.connect({
 <div class="content">
 Hi..
 <br>
-<a href="#" id="send">send</a>
+<button id="send">send</button>
 </div>
 <script>
 
@@ -48,10 +48,9 @@ Zepto(function($){
 
 console.log($('#send'));
 $('#send').on('click',function(e){
-	  alert('hi');
-	/* 	parent.send({
+	  parent.send({
 	    myparam: 'This is anything you want it to be...'
-	  }); */
+	  });
 });
 
 });
