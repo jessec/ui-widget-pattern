@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="../../../../lib/jquery/zepto.min.js"></script>
-<script src="../../../../lib/jquery/zepto-extras.js"></script>
-<script>
-	window.jQuery = Zepto;
-</script>
-<script src="../../../../lib/seamless/build/seamless.child.min.js"></script>
-<script>
-	var parent = $.seamless.connect({
-		url : 'index.html',
-		container : 'div.content',
-		allowStyleInjection : true
-	});
-</script>
-
 <style>
 .content {
 	position: relative;
@@ -28,16 +14,6 @@
 		Hi.. <br>
 		<button id="send">send</button>
 	</div>
-	<script>
-		Zepto(function($) {
-
-			$('#send').on('click', function(e) {
-				parent.send({
-					myparam : 'This is anything you want it to be...'
-				});
-			});
-
-		});
-	</script>
+	<script src="widget.loader.js"></script>
 </body>
 </html>
