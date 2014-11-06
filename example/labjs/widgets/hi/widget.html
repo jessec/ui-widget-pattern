@@ -4,56 +4,45 @@
 <script src="../../../../lib/jquery/zepto.min.js"></script>
 <script src="../../../../lib/jquery/zepto-extras.js"></script>
 <script>
-window.jQuery = Zepto;
+	window.jQuery = Zepto;
 </script>
 <script src="../../../../lib/seamless/build/seamless.child.min.js"></script>
 <script>
-var parent = $.seamless.connect({
-	      url: 'index.html',
-	      container: 'div.content',
-	      allowStyleInjection: true
-	    });
+	var parent = $.seamless.connect({
+		url : 'index.html',
+		container : 'div.content',
+		allowStyleInjection : true
+	});
 </script>
 
 <script src="../../../../lib/inject/inject.min.js"></script>
 <script>
-
-
-
-  Inject.setModuleRoot("./modules");
-  require.run("sub/program");
-
-
-
-
+	Inject.setModuleRoot("./modules");
+	require.run("sub/program");
 </script>
 <style>
 .content {
-  position:relative;
-  height:100px;
-  width:100px;
+	position: relative;
+	height: 100px;
+	width: 100px;
 }
 </style>
 </head>
 <body>
-<div class="content">
-Hi..
-<br>
-<button id="send">send</button>
-</div>
-<script>
+	<div class="content">
+		Hi.. <br>
+		<button id="send">send</button>
+	</div>
+	<script>
+		Zepto(function($) {
 
-Zepto(function($){
+			$('#send').on('click', function(e) {
+				parent.send({
+					myparam : 'This is anything you want it to be...'
+				});
+			});
 
-
-console.log($('#send'));
-$('#send').on('click',function(e){
-	  parent.send({
-	    myparam: 'This is anything you want it to be...'
-	  });
-});
-
-});
-</script>
+		});
+	</script>
 </body>
 </html>
